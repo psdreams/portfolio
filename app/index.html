@@ -22,14 +22,12 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__inner">
-				<div class="logo">
-					<a href="/" class="logo_img">
-						<img src="img/logo.jpg" class="image" alt="ЛОГОТИП" />
-					</a>
-					<div class="logo_text">
-						Запускаем сайты<br> в стратосферу
-					</div>
-				</div>
+
+				<a href="/" class="logo">
+					<img src="img/logo.jpg" class="image" alt="ЛОГОТИП" />
+				</a>
+
+
 				<!-- навигация header -->
 				<nav class="navi">
 					<ul class="navi__inner">
@@ -58,29 +56,34 @@
 	</header>
 
 
-	<section class="hero">
+	<section class="hero mouse-parallax">
+		<div class="mouse-parallax__background"></div>
 		<div class="container">
 
-			<div class="hero__wrapper">
+
+			<div class="mouse-parallax__content">
 				<div class="hero__items">
 					<div class="hero__items-wrapper">
-						<h1 class="hero__h1">Комплексное создание сайтов</h1>
-						<p class="hero__h2">Опыт более 5 лет. Гарантии и сроки прописаны в договоре</p>
-						<p class="hero__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, libero laborum
-							laboriosam id obcaecati dolorelit. Optio, liberoelit. Optio, liberoelit. Optio, liberoelit. Optio,
-							liberoelit. Optio, liberoelit. Optio, liberoelit. Optio, liberoelit. Optio, liberoelit. Optio, libero.
+						<h1 class="hero__h1">Создание и продвижение сайтов</h1>
+						<p class="hero__h2"><span class="typed"></span></p>
+						<p class="hero__text">
+							Добрый день, меня зовут Георгий, и я являюсь частым веб-мастером с опытом более 5 лет. За эти годы своей
+							деятельности я создал и развил много различных проектов.
 						</p>
+						<p>Я предлагаю вам не только качественную разработку и создание сайта, но и могу занятьсь вопросами его
+							продвижения в сети, что значительно увеличит возможности привлечения новых клиентов, а соответственно
+							повысит ваши доходы.</p>
 						<form class="hero__form">
 							<input class="hero__input" type="text" aria-label="номер телефона" placeholder="Введите номер..">
 							<input type="submit" name="submit" value="Отправить">
 						</form>
 					</div>
 				</div>
-				<div class="hero__img">
+				<!-- <div class="hero__img">
 					<div class="hero__img-wrapper">
 						<img src="img/responsive.png" alt="picture">
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
@@ -295,7 +298,8 @@
 								<source srcset="blog-10-wide@1x.png 1x, img/portfolio/100-dverei/1920.jpg 2x"
 									media="(min-width: 600px)">
 								<source srcset="blog-10-square@1x.webp 1x, img/portfolio/100-dverei/1920.webp 2x" type="image/webp">
-								<img src="img/portfolio/100-dverei/920.jpg" srcset="img/portfolio/100-dverei/920.jpg 2x" alt="картинка">
+								<img src="img/portfolio/100-dverei/920.jpg" srcset="img/portfolio/100-dverei/1920.jpg 2x"
+									alt="картинка">
 							</picture>
 						</div>
 						<div class="portfolio__mobile">
@@ -416,7 +420,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!-- <script src="libs/typed.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 	<script src="js/common.min.js"></script>
+
 </body>
 
 </html>
