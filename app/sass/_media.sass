@@ -5,10 +5,26 @@
 		padding: 0px 40px 40px
 
 @media (max-width: 768px)
+	.header
+		&__inner
+			justify-content: space-evenly
 	.navi
-		flex-direction: column
-	.price__inner
+		display: none
+		order: 3
+	.hero
+		&__h1
+			font-size: 24px
+		&__h2
+			min-height: 50px
+			font-size: 18px
 
+	// Удалить после js
+	.mouse-parallax__content
+		transform: none!important
+	// Удалить после js - end
+	.price__inner
+	.hero__items
+		padding: 10px
 	.portfolio
 		&__inner
 			flex-direction: column
