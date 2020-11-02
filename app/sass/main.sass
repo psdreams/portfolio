@@ -319,6 +319,57 @@ img
 
 // sect rev end
 
+//block6 about
+.about
+	margin-bottom: 30px
+	&__title
+		max-width: 400px
+		margin: 0 auto
+		text-align: center
+		font-size: 36px
+		margin-bottom: 30px
+		color: #000
+		background: #e23026
+		background: -webkit-linear-gradient(to right, #e23026, #037b7f)  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #e23026, #037b7f) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		animation-name: gradient
+		animation-duration: 3s
+		animation-iteration-count: infinite
+		z-index: 5
+@keyframes gradient
+	0%
+		background: -webkit-linear-gradient(to right, #e23026, #037b7f)
+	50%
+		background: -webkit-linear-gradient(to right, #037b7f, #e23026)
+	100%
+		background: -webkit-linear-gradient(to right, #e23026, #037b7f)
+
+.about
+	&__main
+		display: flex
+		justify-content: space-evenly
+	&__item
+		display: flex
+		flex-direction: column
+		max-width: 45%
+	span
+		font-weight: 300
+		font-size: 16px
+		margin-bottom: 10px
+		&:last-child
+			font-style: italic
+			color: #000
+.about
+	&__help
+		margin-bottom: 20px
+	&__mess
+		justify-content: center
+		i
+			font-size: 30px
+//block6 about end
+
 //footer
 .footer
 	background-color: #eeeeee
