@@ -17,17 +17,30 @@
 		&__h2
 			min-height: 50px
 			font-size: 18px
+		&__form
+			flex-direction: column
+			max-width: 305px
+			margin: 20px auto 0
 
 	// Удалить после js
 	.mouse-parallax__content
 		transform: none!important
 	// Удалить после js - end
-	.price__inner
+	.price
+		&__inner
+			flex-direction: column
+		.price__items
+			width: 100%
+
 	.hero__items
 		padding: 10px
+		max-width: 100%
+	.price__items-list
+		text-align: center
 	.portfolio
 		&__inner
 			flex-direction: column
+		&__
 		&__item
 			width: 100%
 	.what-we-do__list
@@ -45,5 +58,10 @@
 @media (max-width: 600px)
 	.header__inner
 		flex-direction: column
+	.price__items-list
+		margin-top: 30px
+		margin-bottom: 40px
+	.price__item
+		width: 60%
 	.footer__inner
 		flex-direction: column
