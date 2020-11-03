@@ -234,13 +234,14 @@ img
 	&__inner
 		display: flex
 		justify-content: space-between
-	&__items
-		width: 30%
-		&:first-child
-			display: flex
-			justify-content: space-evenly
-			flex-wrap: wrap
-			width: 60%
+	&__items-text
+		width: 40%
+		padding-left: 4%
+	&__items-card
+		display: flex
+		justify-content: space-evenly
+		flex-wrap: wrap
+		width: 60%
 	&__item
 		width: 35%
 		background-color: #ffffff
@@ -248,15 +249,26 @@ img
 		border-radius: 5px
 		padding: 10px 5px
 		margin-bottom: 20px
+		transition: transform .3s ease-in
+		&:hover
+			transform: scale(1.1)
 	&__name
 		padding: 10px
 		text-align: center
-		//background-color: #037b7f
+		min-height: 44px
+	&__name-item
+		display: block
+		min-height: 44px
 	&__item-img
 		width: 40%
 		margin: 0 auto
+	&__list-h2
+		margin-bottom: 30px
+		text-decoration: underline
+		font-size: 30px
 	&__list
 		padding: 10px 0
+		margin-bottom: 10px
 		p
 			margin-bottom: 10px
 			position: relative
@@ -278,11 +290,30 @@ img
 		margin-bottom: 10px
 	.btn
 		margin: auto
+		background-color: #e23026
+		color: #fff
+		// font-weight: 400
 //.price__items-list
 .price__link
-	font-size: 20px
+	font-size: 24px
+	position: relative
+	display: inline-block
+	&::after
+		content: ''
+		position: absolute
+		background-color: #000
+		height: 1px
+		width: 100%
+		transform: scale(0)
+		transition: .5s
+		bottom: 0
+		left: 0
+	&:hover
+		&::after
+			transform: scale(1)
 
 // block3 price end
+
 .portfolio
 	&__inner
 		display: flex
