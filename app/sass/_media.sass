@@ -4,6 +4,10 @@
 		grid-template-columns: repeat(2,1fr)
 		padding: 0px 40px 40px
 
+@media (max-width: 930px)
+	.rev .rev-item__text
+		font-size: 20px
+
 @media (max-width: 768px)
 	.header
 		&__inner
@@ -73,5 +77,10 @@
 		margin-bottom: 40px
 	.price__item
 		width: 60%
+	.rev .swiper-slide
+		flex-direction: column
+	.rev-item__text-author
+		border-top: 1px solid #fff
+		padding-top: 10px
 	.footer__inner
 		flex-direction: column

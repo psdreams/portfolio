@@ -74,5 +74,24 @@ var mySwiper = new Swiper('.swiper-container', {
 	scrollbar: {
 	  el: '.swiper-scrollbar',
 	},
+	// breakpoints
+	breakpoints: {
+		    1200: {
+		      slidesPerView: 1.7,
+		      spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 1.3,
+				spaceBetween: 20,
+			  },
+			500: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			}
+		  },
   })
 
