@@ -84,17 +84,16 @@ img
 
 // logo
 .logo
-	display: flex
-	align-items: center
-	&_img
-		margin-right: 10px
-		width: 100px
+	margin-right: 10px
+	width: 100px
 
 // header
 .header
-	background-color: #2d3436
 	background-color: #000
 	color: #ffffff
+	// position: sticky
+	// top: 0
+	// z-index: 111
 	&__inner
 		display: flex
 		justify-content: space-between
@@ -137,21 +136,75 @@ img
 		&:hover
 			&::after
 				transform: scale(1)
+.navi-mob
+	display: none
+	position: relative
+	transition: all 2s linear
+	&__items
+		// display: none
+		position: absolute
+		min-width: 290px
+		top: 30px
+		right: 0px
+		padding: 30px 20px
+		background-color: #fff
+		color: #000
+		border-radius: 5px
+		z-index: 1
+		transition: 1s ease
+		transform-origin: top center
+		transform: scaleY(0) translateY(20%)
+		opacity: 0
+	&__items_active
+		transform: scaleY(1) translateY(0%)
+		opacity: 1
+		li
+			margin-bottom: 10px
+			border-bottom: 1px solid #eee
 
+.navi-mob__burger
+	display: flex
+	align-items: center
+	width: 30px
+	height: 20px
+	.burger
+		display: block
+		position: relative
+		width: 30px
+		height: 2px
+		background-color: #fff
+		&::before
+			content: ""
+			position: absolute
+			width: 30px
+			height: 2px
+			bottom: 9px
+			left: 0
+			background-color: #fff
+		&::after
+			content: ""
+			position: absolute
+			width: 30px
+			height: 2px
+			top: 9px
+			left: 0
+			background-color: #fff
+.block_active
+	display: block
+.block_hidden
+	display: block
+	opacity: 0
 //navi end
 
 // hero block2
 .hero
-	background-color: #000
 	padding-bottom: 40px
-	&__wrapper
-		display: flex
-		justify-content: space-around
+
 	&__h1
 		margin-bottom: 20px
 		position: relative
 		padding-bottom: 20px
-		font-size: 30px
+		font-size: 36px
 		&::after
 			position: absolute
 			content: ''
@@ -162,19 +215,19 @@ img
 			background-color: $accent
 	&__h2
 		margin-bottom: 20px
+		font-size: 26px
+		color: #000000
+		font-weight: bold
 	&__text
 		line-height: 20px
 		margin-bottom: 20px
 
 .hero__items
-	display: flex
-	flex-direction: column
-	justify-content: center
-	align-items: center
-	padding: 10px
-	color: #fff
-	&-wrapper
-		max-width: 500px
+	max-width: 800px
+	margin: 30px auto
+	padding: 60px
+	background-color: rgba(#fff,.7)
+
 .hero__form
 	margin-top: 20px
 	display: flex
@@ -185,6 +238,24 @@ img
 			background-color: $accent
 			color: #fff
 			cursor: pointer
+//typed
+.typed::after
+	content: '|'
+	display: inline
+	animation: blink 0.7s infinite
+
+.typed-cursor
+	opacity: 0
+	display: none
+
+@keyframes blink
+	0%
+		opacity: 1
+	50%
+		opacity: 0
+	100%
+		opacity: 1
+
 //sect
 .sect
 	padding-top: 30px
@@ -199,6 +270,18 @@ img
 		margin-bottom: 30px
 
 // hero block2 end
+.mouse-parallax
+	position: relative
+	overflow: hidden
+	&__background
+		position: absolute
+		z-index: -1
+		width: 110%
+		height: 110%
+		background-position: center
+		background-size: cover
+		background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+	//&__content
 
 // block3 price
 
@@ -206,13 +289,14 @@ img
 	&__inner
 		display: flex
 		justify-content: space-between
-	&__items
-		width: 30%
-		&:first-child
-			display: flex
-			justify-content: space-evenly
-			flex-wrap: wrap
-			width: 60%
+	&__items-text
+		width: 40%
+		padding-left: 4%
+	&__items-card
+		display: flex
+		justify-content: space-evenly
+		flex-wrap: wrap
+		width: 60%
 	&__item
 		width: 35%
 		background-color: #ffffff
@@ -220,17 +304,26 @@ img
 		border-radius: 5px
 		padding: 10px 5px
 		margin-bottom: 20px
-
-		//margin: 20px
+		transition: transform .3s ease-in
+		&:hover
+			transform: scale(1.1)
 	&__name
 		padding: 10px
 		text-align: center
-		//background-color: #037b7f
+		min-height: 44px
+	&__name-item
+		display: block
+		min-height: 44px
 	&__item-img
 		width: 40%
 		margin: 0 auto
+	&__list-h2
+		margin-bottom: 30px
+		text-decoration: underline
+		font-size: 30px
 	&__list
 		padding: 10px 0
+		margin-bottom: 10px
 		p
 			margin-bottom: 10px
 			position: relative
@@ -252,12 +345,32 @@ img
 		margin-bottom: 10px
 	.btn
 		margin: auto
-.price__items-list
+		background-color: #e23026
+		color: #fff
+		// font-weight: 400
+//.price__items-list
 .price__link
-	font-size: 20px
+	font-size: 24px
+	position: relative
+	display: inline-block
+	&::after
+		content: ''
+		position: absolute
+		background-color: #000
+		height: 1px
+		width: 100%
+		transform: scale(0)
+		transition: .5s
+		bottom: 0
+		left: 0
+	&:hover
+		&::after
+			transform: scale(1)
 
 // block3 price end
+
 .portfolio
+	background-color: #fff
 	&__inner
 		display: flex
 		justify-content: space-between
@@ -279,7 +392,7 @@ img
 			position: absolute
 			left: -19px
 			z-index: auto
-			width: 105.3%
+			width: 102.5%
 			padding-top: 3.13%
 			border: 3px solid #000
 			border-radius: 0 0 15px 15px
@@ -287,7 +400,7 @@ img
 		position: absolute
 		bottom: -30px
 		right: -20px
-		width: 27%
+		width: 23%
 		border: 3px solid #000
 		border-radius: 5px
 
@@ -312,12 +425,100 @@ img
 
 // sect rev
 .rev
-	&__text
-		color: #888888
-	&__name
+	.swiper-container
+		border-radius: 5px
+	.swiper-slide
+		display: flex
+		// min-height: 200px
+		height: auto!important
+		padding: 40px 25px 30px
+		background-color: #e23026
+	.rev-item__text-content
+		padding-right: 30px
+	.rev-item__text
+		margin-bottom: 15px
+		color: #ffffff
+		font-size: 24px
+		line-height: 30px
+	.rev-item__link
 		font-size: 14px
+		font-weight: 700
+		color: #fff
+		margin-bottom: 10px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			left: -10px
+			bottom: 0
+			width: 1px
+			height: 16px
+			background-color: #fff
 
+	.rev-item__text-author
+		min-width: 144px
+		color: #ffffff
+		font-size: 17px
+	.rev-item__author-link
+		span
+			margin-bottom: 13px
+			display: block
+	.rev__videonablydenie
+		font-size: 15px
+	.rev-item__author
+		font-size: 14px
 // sect rev end
+
+//block6 about
+.about
+	margin-bottom: 30px
+	&__title
+		max-width: 400px
+		margin: 0 auto
+		text-align: center
+		font-size: 36px
+		margin-bottom: 30px
+		color: #000
+		background: #e23026
+		background: -webkit-linear-gradient(to right, #e23026, #037b7f)  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #e23026, #037b7f) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		animation-name: gradient
+		animation-duration: 3s
+		animation-iteration-count: infinite
+		z-index: 5
+@keyframes gradient
+	0%
+		background: -webkit-linear-gradient(to right, #e23026, #037b7f)
+	50%
+		background: -webkit-linear-gradient(to right, #037b7f, #e23026)
+	100%
+		background: -webkit-linear-gradient(to right, #e23026, #037b7f)
+
+.about
+	&__main
+		display: flex
+		justify-content: space-between
+	&__item
+		display: flex
+		flex-direction: column
+		max-width: 45%
+	span
+		font-weight: 300
+		font-size: 16px
+		margin-bottom: 10px
+		&:last-child
+			font-style: italic
+			color: #000
+.about
+	&__help
+		margin-bottom: 20px
+	&__mess
+		justify-content: center
+		i
+			font-size: 30px
+//block6 about end
 
 //footer
 .footer
