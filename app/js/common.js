@@ -28,23 +28,28 @@ $(document).ready(function () {
 
 // menu header
 
-// открытие окна
+// открытие окна - js без анимации
+// document.getElementById("navi-mob__burger").onclick = function () {
+//   document.getElementById("navi-mob__items").classList.toggle("block_active");
+// };
+
+// анимация открытия окна меню - анимацией
 document.getElementById("navi-mob__burger").onclick = function () {
-  document.getElementById("navi-mob__items").classList.toggle("block_active");
+	document.getElementById("navi-mob__items").classList.toggle("navi-mob__items_active");
 };
 // закрытие окна
 // document.querySelectorAll("#navi-mob_portfolio, #navi-mob_price, #navi-mob_reviews, #navi-mob_contacts").onclick = function () {
 document.getElementById("navi-mob_portfolio").onclick = function () {
-	document.getElementById("navi-mob__items").classList.remove("block_active");
+	document.getElementById("navi-mob__items").classList.remove("navi-mob__items_active");
 };
 document.getElementById("navi-mob_price").onclick = function () {
-	document.getElementById("navi-mob__items").classList.remove("block_active");
+	document.getElementById("navi-mob__items").classList.remove("navi-mob__items_active");
 };
 document.getElementById("navi-mob_reviews").onclick = function () {
-	document.getElementById("navi-mob__items").classList.remove("block_active");
+	document.getElementById("navi-mob__items").classList.remove("navi-mob__items_active");
 };
 document.getElementById("navi-mob_contacts").onclick = function () {
-	document.getElementById("navi-mob__items").classList.remove("block_active");
+	document.getElementById("navi-mob__items").classList.remove("navi-mob__items_active");
 };
 // menu header end
 
@@ -74,7 +79,6 @@ var mySwiper = new Swiper('.swiper-container', {
 	scrollbar: {
 	  el: '.swiper-scrollbar',
 	},
-	// breakpoints
 	breakpoints: {
 		    1200: {
 		      slidesPerView: 1.7,
@@ -95,3 +99,4 @@ var mySwiper = new Swiper('.swiper-container', {
 		  },
   })
 
+  // swiper slide end
