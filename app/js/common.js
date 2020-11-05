@@ -26,7 +26,25 @@ $(document).ready(function () {
 	});
 });
 
-
+// menu header
+// открытие окна
+document.getElementById("navi-mob__burger").onclick = function () {
+  document.getElementById("navi-mob__items").classList.toggle("block_active");
+};
+// закрытие окна
+// document.querySelectorAll("#navi-mob_portfolio, #navi-mob_price, #navi-mob_reviews, #navi-mob_contacts").onclick = function () {
+document.getElementById("navi-mob_portfolio").onclick = function () {
+	document.getElementById("navi-mob__items").classList.remove("block_active");
+};
+document.getElementById("navi-mob_price").onclick = function () {
+	document.getElementById("navi-mob__items").classList.remove("block_active");
+};
+document.getElementById("navi-mob_reviews").onclick = function () {
+	document.getElementById("navi-mob__items").classList.remove("block_active");
+};
+document.getElementById("navi-mob_contacts").onclick = function () {
+	document.getElementById("navi-mob__items").classList.remove("block_active");
+};
 
 
 

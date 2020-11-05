@@ -138,7 +138,54 @@ img
 				transform: scale(1)
 .navi-mob
 	display: none
+	position: relative
+	&__items
+		display: none
+		position: absolute
+		min-width: 280px
+		top: 30px
+		right: 0px
+		padding: 30px 20px
+		background-color: #fff
+		color: #000
+		border-radius: 5px
+		z-index: 1
+		li
+			margin-bottom: 10px
+			border-bottom: 1px solid #eee
 
+.navi-mob__burger
+	// display: none
+	display: flex
+	align-items: center
+	width: 30px
+	height: 20px
+	.burger
+		display: block
+		position: relative
+		width: 30px
+		height: 2px
+		background-color: #fff
+		&::before
+			content: ""
+			position: absolute
+			width: 30px
+			height: 2px
+			bottom: 9px
+			left: 0
+			background-color: #fff
+		&::after
+			content: ""
+			position: absolute
+			width: 30px
+			height: 2px
+			top: 9px
+			left: 0
+			background-color: #fff
+.block_active
+	display: block
+.block_hidden
+	display: block
 //navi end
 
 // hero block2
@@ -406,7 +453,7 @@ img
 .about
 	&__main
 		display: flex
-		justify-content: space-evenly
+		justify-content: space-between
 	&__item
 		display: flex
 		flex-direction: column

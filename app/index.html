@@ -47,14 +47,14 @@
 				<!-- навигация header mob -->
 
 				<nav class="navi-mob">
-					<a href="">
-						<div class="navi-mob__burger"><span></span></div>
+					<a id="navi-mob__burger" class="navi-mob__burger" href="javascript:void(0);">
+						<div class="navi-mob__inner"><span class="burger"></span></div>
 					</a>
-					<ul class="navi-mob__items">
-						<li><a href="" class="navi-mob_link">Портфолио</a></li>
-						<li><a href="" class="navi-mob_link">Цены</a></li>
-						<li><a href="" class="navi-mob_link">Отзывы</a></li>
-						<li><a href="" class="navi-mob_link">Контакты</a></li>
+					<ul id="navi-mob__items" class="navi-mob__items">
+						<li><a href="#portfolio" class="navi-mob_link" id="navi-mob_portfolio">Портфолио</a></li>
+						<li><a href="#price" class="navi-mob_link" id="navi-mob_price">Цены</a></li>
+						<li><a href="#reviews" class="navi-mob_link" id="navi-mob_reviews">Отзывы</a></li>
+						<li><a href="#contacts" class="navi-mob_link" id="navi-mob_contacts">Контакты</a></li>
 					</ul>
 				</nav>
 
@@ -363,7 +363,7 @@
 		</div>
 	</section>
 
-	<section class="sect rev">
+	<section class="sect rev" id="reviews">
 		<div class="container">
 			<div class="sect__title">Отзывы</div>
 			<div class="rev__inner">
@@ -376,7 +376,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="about">
+	<section class="about" id="contacts">
 		<div class="container">
 			<div class="about__inner">
 				<h1 class="about__title">Пишите, звоните</h1>
@@ -385,10 +385,10 @@
 						<span>Москва</span>
 						<span>Дорожная улица, 60Б</span>
 						<span>Кофейная Кантата</span>
-						<span>Нет, мы не работаем в кафе, но предпочитаем обсуждать и встречаться в тёплой атмосфере за чашечкой кофе ил чая.</span>
+						<span>Нет, мы не работаем в кафе, но предпочитаем обсуждать и встречаться в тёплой атмосфере за чашечкой кофе или чая.</span>
 					</div>
 					<div class="about__item">
-						<span><a href="tel:89152929910">8(915) 292-99-10</a></span>
+						<span><a href="tel:89152929910">8 (915) 292-99-10</a></span>
 						<p class="about__help">С встретиться можно нами с понедельника по пятницу 11:00 – 18:00</p>
 						<div class="header__mess about__mess">
 							<a href="https://wa.me/79998477895" target="_blank"><i class="fab fa-whatsapp"></i></a>
