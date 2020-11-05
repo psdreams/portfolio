@@ -27,6 +27,7 @@ $(document).ready(function () {
 });
 
 // menu header
+
 // открытие окна
 document.getElementById("navi-mob__burger").onclick = function () {
   document.getElementById("navi-mob__items").classList.toggle("block_active");
@@ -45,6 +46,33 @@ document.getElementById("navi-mob_reviews").onclick = function () {
 document.getElementById("navi-mob_contacts").onclick = function () {
 	document.getElementById("navi-mob__items").classList.remove("block_active");
 };
+// menu header end
 
 
+// swiper slide
+var mySwiper = new Swiper('.swiper-container', {
+	// Optional parameters
+	slidesPerView: 3,
+	loop: true,
+	// centeredSlides: !0,
+	centeredSlides: true,
+	spaceBetween: 30,
+	slidesPerView: "1.7",
+  
+	// If we need pagination
+	pagination: {
+	  el: '.swiper-pagination',
+	},
+  
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+  
+	// And if we need scrollbar
+	scrollbar: {
+	  el: '.swiper-scrollbar',
+	},
+  })
 
