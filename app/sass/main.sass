@@ -139,10 +139,11 @@ img
 .navi-mob
 	display: none
 	position: relative
+	transition: all 2s linear
 	&__items
 		display: none
 		position: absolute
-		min-width: 280px
+		min-width: 290px
 		top: 30px
 		right: 0px
 		padding: 30px 20px
@@ -155,7 +156,6 @@ img
 			border-bottom: 1px solid #eee
 
 .navi-mob__burger
-	// display: none
 	display: flex
 	align-items: center
 	width: 30px
@@ -186,6 +186,7 @@ img
 	display: block
 .block_hidden
 	display: block
+	opacity: 0
 //navi end
 
 // hero block2
@@ -362,6 +363,7 @@ img
 // block3 price end
 
 .portfolio
+	background-color: #fff
 	&__inner
 		display: flex
 		justify-content: space-between
@@ -383,7 +385,7 @@ img
 			position: absolute
 			left: -19px
 			z-index: auto
-			width: 105.3%
+			width: 102.5%
 			padding-top: 3.13%
 			border: 3px solid #000
 			border-radius: 0 0 15px 15px
@@ -391,7 +393,7 @@ img
 		position: absolute
 		bottom: -30px
 		right: -20px
-		width: 27%
+		width: 23%
 		border: 3px solid #000
 		border-radius: 5px
 
@@ -433,16 +435,29 @@ img
 		line-height: 30px
 	.rev-item__link
 		font-size: 14px
+		font-weight: 700
 		color: #fff
 		margin-bottom: 10px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			left: -10px
+			bottom: 0
+			width: 1px
+			height: 16px
+			background-color: #fff
+
 	.rev-item__text-author
-		min-width: 125px
+		min-width: 144px
 		color: #ffffff
 		font-size: 17px
 	.rev-item__author-link
 		span
 			margin-bottom: 13px
 			display: block
+	.rev__videonablydenie
+		font-size: 15px
 	.rev-item__author
 		font-size: 14px
 // sect rev end
