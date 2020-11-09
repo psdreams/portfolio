@@ -4,3 +4,7 @@
 /**/package-lock.json
 /**/Thumbs.db
 /**/*.DS_Store
+/app/css/*.css
+/app/js/*.min.js
+/app/js/common.min.js
+

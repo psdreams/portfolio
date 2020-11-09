@@ -3,11 +3,18 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>SaitoSfera</title>
+	<title>Кузин сайт</title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<!-- <link rel="manifest" href="/site.webmanifest"> -->
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!-- favicon end-->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
@@ -37,16 +44,29 @@
 						<li><a href="#contacts">Контакты</a></li>
 					</ul>
 				</nav>
+				<!-- навигация header mob -->
+
+				<nav class="navi-mob">
+					<a id="navi-mob__burger" class="navi-mob__burger" href="javascript:void(0);">
+						<div class="navi-mob__inner"><span class="burger"></span></div>
+					</a>
+					<ul id="navi-mob__items" class="navi-mob__items">
+						<li><a href="#portfolio" class="navi-mob_link" id="navi-mob_portfolio">Портфолио</a></li>
+						<li><a href="#price" class="navi-mob_link" id="navi-mob_price">Цены</a></li>
+						<li><a href="#reviews" class="navi-mob_link" id="navi-mob_reviews">Отзывы</a></li>
+						<li><a href="#contacts" class="navi-mob_link" id="navi-mob_contacts">Контакты</a></li>
+					</ul>
+				</nav>
 
 				<div class="header_wrapper__left">
 					<a href="tel:+79152929910" class="tel_wrapper">+7 (915) 29-29-910</a>
 
 
 					<div class="header__mess">
-						<a href="https://wa.me/79998477895" target="_blank"><i class="fab fa-whatsapp"></i></a>
-						<a href="https://viber.click/79998477895" target="_blank"><i class="fab fa-viber"></i></a>
-						<a href="tg://resolve?domain=kirill_kbk" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-						<a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+						<a href="https://wa.me/79152929910" target="_blank"><i class="fab fa-whatsapp"></i></a>
+						<a href="https://viber.click/79152929910" target="_blank"><i class="fab fa-viber"></i></a>
+						<a href="tg://t.me/postmandreams" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+						<a href="https://www.instagram.com/p/CHJpCOzAisV/?igshid=1ex0434oou6bv" target="_blank"><i class="fab fa-instagram"></i></a>
 					</div>
 
 				</div>
@@ -67,14 +87,11 @@
 						<h1 class="hero__h1">Создание и продвижение сайтов</h1>
 						<p class="hero__h2"><span class="typed"></span></p>
 						<p class="hero__text">
-							Добрый день, меня зовут Георгий, и я являюсь частым веб-мастером с опытом более 5 лет. За эти годы своей
-							деятельности я создал и развил много различных проектов.
+							Добрый день, меня зовут Георгий, и&nbsp;я&nbsp;являюсь частым веб-мастером с&nbsp;опытом более 5&nbsp;лет. За&nbsp;эти годы своей деятельности я&nbsp;создал и&nbsp;развил много различных проектов.
 						</p>
-						<p>Я предлагаю вам не только качественную разработку и создание сайта, но и могу занятьсь вопросами его
-							продвижения в сети, что значительно увеличит возможности привлечения новых клиентов, а соответственно
-							повысит ваши доходы.</p>
+						<p>Я&nbsp;предлагаю вам не&nbsp;только качественную разработку и&nbsp;создание сайта, но&nbsp;и&nbsp;могу занятьсь вопросами его продвижения в&nbsp;сети, что значительно увеличит возможности привлечения новых клиентов, а&nbsp;соответственно повысит ваши доходы.</p>
 						<form class="hero__form">
-							<input class="hero__input" type="text" aria-label="номер телефона" placeholder="Введите номер..">
+							<input id="phone" class="hero__input" type="text" inputmode="numeric" pattern=".*" data-rule="number" aria-label="номер телефона" placeholder="Введите номер..">
 							<input type="submit" name="submit" value="Отправить">
 						</form>
 					</div>
@@ -92,22 +109,15 @@
 		<div class="container">
 			<h2 class="sect__title">Цены</h2>
 			<div class="price__inner">
-				<div class="price__items">
+				<div class="price__items price__items-card">
 					<div class="price__item">
 						<div class="price__name">
 							<span class="price__name-item">Лендинг</span>
 						</div>
 						<div class="price__item-img">
-							<img src="img/price/site-xs.jpg" alt="">
+							<img src="img/price/landing-page.svg" alt="landing-page">
 						</div>
-						<!-- <div class="price__list">
-							<p>Lorem, ipsum.</p>
-							<p>Lorem, ipsum.</p>
-							<p>Lorem, ipsum.</p>
-							<p>Lorem, ipsum.</p>
-							<p>Lorem, ipsum.</p>
-						</div> -->
-						<div class="price__price">50 000₽</div>
+						<div class="price__price">38 000₽</div>
 						<div class="price__btn">
 							<button class="btn">заказать</button>
 						</div>
@@ -117,9 +127,9 @@
 							<span class="price__name-item">Сайт-визитка</span>
 						</div>
 						<div class="price__item-img">
-							<img src="img/price/site-xs.jpg" alt="">
+							<img src="img/price/site-contact.svg" alt="site-contact">
 						</div>
-						<div class="price__price">50 000₽</div>
+						<div class="price__price">60 000₽</div>
 						<div class="price__btn">
 							<button class="btn">заказать</button>
 						</div>
@@ -129,9 +139,9 @@
 							<span class="price__name-item">Интернет-магазин</span>
 						</div>
 						<div class="price__item-img">
-							<img src="img/price/site-xs.jpg" alt="">
+							<img src="img/price/online-store.svg" alt="online-store">
 						</div>
-						<div class="price__price">50 000₽</div>
+						<div class="price__price">90 000₽</div>
 						<div class="price__btn">
 							<button class="btn">заказать</button>
 						</div>
@@ -141,23 +151,28 @@
 							<span class="price__name-item">Корпоративный сайт</span>
 						</div>
 						<div class="price__item-img">
-							<img src="img/price/site-xs.jpg" alt="">
+							<img src="img/price/corporative-site.svg" alt="corporative-site">
 						</div>
-						<div class="price__price">50 000₽</div>
+						<div class="price__price">70 000₽</div>
 						<div class="price__btn">
 							<button class="btn">заказать</button>
 						</div>
 					</div>
 				</div>
-				<ul class="price__items price__items-list">
-					<li class="price__list"><a class="price__link" href="">Анализ конкурентов</a></li>
-					<li class="price__list"><a class="price__link" href="">Грамотная структура</a></li>
-					<li class="price__list"><a class="price__link" href="">Уникальный дизайн</a></li>
-					<li class="price__list"><a class="price__link" href="">Мобильная версия</a></li>
-					<li class="price__list"><a class="price__link" href="">Удобная админка</a></li>
-					<li class="price__list"><a class="price__link" href="">Настройка аналитики</a></li>
-					<li class="price__list"><a class="price__link" href="">Регистрация домена и хостинга</a></li>
-				</ul>
+				<div class="price__items price__items-text">
+					<div class="price__list-title">
+						<h2 class="price__list-h2">Что вы получаете</h2>
+					</div>
+					<ul class="price__items-list">
+						<li class="price__list"><a class="price__link" href="">Анализ конкурентов</a></li>
+						<li class="price__list"><a class="price__link" href="">Грамотная структура</a></li>
+						<li class="price__list"><a class="price__link" href="">Уникальный дизайн</a></li>
+						<li class="price__list"><a class="price__link" href="">Мобильная версия</a></li>
+						<li class="price__list"><a class="price__link" href="">Удобная админка</a></li>
+						<li class="price__list"><a class="price__link" href="">Настройка аналитики</a></li>
+						<li class="price__list"><a class="price__link" href="">Регистрация домена и хостинга</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -179,22 +194,22 @@
 					<div class="portfolio__wrapper">
 						<div class="portfolio__laptop">
 							<picture>
-								<source srcset="blog-10-wide@1x.webp 1x, img/portfolio/kbk-control/1920.webp 2x"
+								<source srcset="img/portfolio/kbk-control/1920.webp 1x, img/portfolio/kbk-control/1920.webp 2x"
 									media="(min-width: 600px)" type="image/webp">
-								<source srcset="blog-10-wide@1x.png 1x, img/portfolio/kbk-control/1920.png 2x"
+								<source srcset="img/portfolio/kbk-control/1920.png 1x, img/portfolio/kbk-control/1920.png 2x"
 									media="(min-width: 600px)">
-								<source srcset="blog-10-square@1x.webp 1x, img/portfolio/kbk-control/1920.webp 2x" type="image/webp">
+								<source srcset="img/portfolio/kbk-control/1920.webp 1x, img/portfolio/kbk-control/1920.webp 2x" type="image/webp">
 								<img src="img/portfolio/kbk-control/1920.png" srcset="img/portfolio/kbk-control/1920.png 2x"
 									alt="картинка">
 							</picture>
 						</div>
 						<div class="portfolio__mobile">
 							<picture>
-								<source srcset="blog-10-wide@1x.webp 1x, img/portfolio/kbk-control/320x638.webp 2x"
+								<source srcset="img/portfolio/kbk-control/320x638.webp 1x, img/portfolio/kbk-control/320x638.webp 2x"
 									media="(min-width: 600px)" type="image/webp">
-								<source srcset="blog-10-wide@1x.png 1x, img/portfolio/kbk-control/320x638.png 2x"
+								<source srcset="img/portfolio/kbk-control/320x638.png 1x, img/portfolio/kbk-control/320x638.png 2x"
 									media="(min-width: 600px)">
-								<source srcset="blog-10-square@1x.webp 1x, img/portfolio/kbk-control/320x638.webp 2x" type="image/webp">
+								<source srcset="img/portfolio/kbk-control/320x638.webp 1x, img/portfolio/kbk-control/320x638.webp 2x" type="image/webp">
 								<img src="img/portfolio/kbk-control/320x638.png" srcset="img/portfolio/kbk-control/320x638.png 2x"
 									alt="картинка">
 							</picture>
@@ -260,11 +275,11 @@
 					<div class="portfolio__wrapper">
 						<div class="portfolio__laptop">
 							<picture>
-								<source srcset="blog-10-wide@1x.webp 1x, img/portfolio/videonablydenie/1920.webp 2x"
+								<source srcset="img/portfolio/videonablydenie/1920.webp 1x, img/portfolio/videonablydenie/1920.webp 2x"
 									media="(min-width: 600px)" type="image/webp">
-								<source srcset="blog-10-wide@1x.png 1x, img/portfolio/videonablydenie/1920.png 2x"
+								<source srcset="img/portfolio/videonablydenie/1920.png 1x, img/portfolio/videonablydenie/1920.png 2x"
 									media="(min-width: 600px)">
-								<source srcset="blog-10-square@1x.webp 1x, img/portfolio/videonablydenie/1920.webp 2x"
+								<source srcset="img/portfolio/videonablydenie/1920.webp 1x, img/portfolio/videonablydenie/1920.webp 2x"
 									type="image/webp">
 								<img src="img/portfolio/videonablydenie/1920.png" srcset="img/portfolio/videonablydenie/1920.png 2x"
 									alt="картинка">
@@ -272,11 +287,11 @@
 						</div>
 						<div class="portfolio__mobile">
 							<picture>
-								<source srcset="blog-10-wide@1x.webp 1x, img/portfolio/videonablydenie/320.webp 2x"
+								<source srcset="img/portfolio/videonablydenie/320.webp 1x, img/portfolio/videonablydenie/320.webp 2x"
 									media="(min-width: 600px)" type="image/webp">
-								<source srcset="blog-10-wide@1x.png 1x, img/portfolio/videonablydenie/320.png 2x"
+								<source srcset="img/portfolio/videonablydenie/320.png 1x, img/portfolio/videonablydenie/320.png 2x"
 									media="(min-width: 600px)">
-								<source srcset="blog-10-square@1x.webp 1x, img/portfolio/videonablydenie/320.webp 2x" type="image/webp">
+								<source srcset="img/portfolio/videonablydenie/320.webp 1x, img/portfolio/videonablydenie/320.webp 2x" type="image/webp">
 								<img src="img/portfolio/videonablydenie/320.png" srcset="img/portfolio/videonablydenie/320.png 2x"
 									alt="картинка">
 							</picture>
@@ -293,21 +308,22 @@
 					<div class="portfolio__wrapper">
 						<div class="portfolio__laptop">
 							<picture>
-								<source srcset="blog-10-wide@1x.webp 1x, img/portfolio/100-dverei/1920.webp 2x"
+								<source srcset="img/portfolio/100-dverei/1920.webp 1x, img/portfolio/100-dverei/1920.webp 2x"
 									media="(min-width: 600px)" type="image/webp">
-								<source srcset="blog-10-wide@1x.png 1x, img/portfolio/100-dverei/1920.jpg 2x"
+								<source srcset="img/portfolio/100-dverei/1920.png 1x, img/portfolio/100-dverei/1920.jpg 2x"
 									media="(min-width: 600px)">
-								<source srcset="blog-10-square@1x.webp 1x, img/portfolio/100-dverei/1920.webp 2x" type="image/webp">
-								<img src="img/portfolio/100-dverei/920.jpg" srcset="img/portfolio/100-dverei/1920.jpg 2x"
-									alt="картинка">
+								<source srcset="img/portfolio/100-dverei/1920.webp 1x, img/portfolio/100-dverei/1920.webp 2x" type="image/webp">
+
+								<img src="img/portfolio/100-dverei/1920.jpg" srcset="img/portfolio/100-dverei/1920.jpg 2x" alt="картинка">
+
 							</picture>
 						</div>
 						<div class="portfolio__mobile">
 							<picture>
-								<source srcset="blog-10-wide@1x.webp 1x, img/portfolio/100-dverei/320.webp 2x"
+								<source srcset="img/portfolio/100-dverei/320.webp 1x, img/portfolio/100-dverei/320.webp 2x"
 									media="(min-width: 600px)" type="image/webp">
-								<source srcset="blog-10-wide@1x.png 1x, img/portfolio/100-dverei/320.jpg 2x" media="(min-width: 600px)">
-								<source srcset="blog-10-square@1x.webp 1x, img/portfolio/100-dverei/320.webp 2x" type="image/webp">
+								<source srcset="img/portfolio/100-dverei/320.png 1x, img/portfolio/100-dverei/320.jpg 2x" media="(min-width: 600px)">
+								<source srcset="img/portfolio/100-dverei/320.webp 1x, img/portfolio/100-dverei/320.webp 2x" type="image/webp">
 								<img src="img/portfolio/100-dverei/320.jpg" srcset="img/portfolio/100-dverei/320.jpg 2x" alt="картинка">
 							</picture>
 						</div>
@@ -324,35 +340,119 @@
 			<ul class="what-we-do__list">
 				<li class="what-we-do__item what-we-do__item--count">
 					<h3 class="what-we-do__subtitle">Лендинги</h3>
-					<p class="what-we-do__text">Как с нуля, так и для готового продукта. Скорость загрузки, SEO френдли разметка,
-						небольшие анимации.</p>
+					<p class="what-we-do__text">Как с&nbsp;нуля, так и&nbsp;для готового продукта. Скорость загрузки, SEO френдли разметка, небольшие анимации.</p>
 				</li>
 				<li class="what-we-do__item what-we-do__item--count">
 					<h3 class="what-we-do__subtitle">Адаптив без макетов</h3>
-					<p class="what-we-do__text">Поможем вам сэкономить на работе дизайнера, по согласованию, самостоятельно
-						выполнив адаптив.</p>
+					<p class="what-we-do__text">Поможем вам сэкономить на&nbsp;работе дизайнера, по&nbsp;согласованию, самостоятельно выполнив адаптив.</p>
 				</li>
 				<li class="what-we-do__item what-we-do__item--count">
 					<h3 class="what-we-do__subtitle">Анимации</h3>
-					<p class="what-we-do__text">Предложим микроанимации и анимации на свой вкус. Чтобы было красиво и легко.</p>
+					<p class="what-we-do__text">Предложим микроанимации и&nbsp;анимации на&nbsp;свой вкус. Чтобы было красиво и&nbsp;легко.</p>
 				</li>
 				<li class="what-we-do__item what-we-do__item--count">
 					<h3 class="what-we-do__subtitle">Перфоманс</h3>
-					<p class="what-we-do__text">Оптимизируем скорость загрузки и работы, доступность и SEO.</p>
+					<p class="what-we-do__text">Оптимизируем скорость загрузки и&nbsp;работы, доступность и&nbsp;SEO.</p>
 				</li>
 			</ul>
 		</div>
 	</section>
 
-	<section class="sect rev">
+	<section class="sect rev" id="reviews">
 		<div class="container">
 			<div class="sect__title">Отзывы</div>
 			<div class="rev__inner">
-				<div class="rev__item">
-					<div class="rev__text">
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, quibusdam.</p>
+				<!-- Swiper Slider main container -->
+				<div class="swiper-container">
+					<!-- Additional required wrapper -->
+					<ul class="swiper-wrapper">
+						<!-- Slides -->
+						<li class="swiper-slide">
+							<div class="rev-item__text-content">
+								<p class="rev-item__text">Ребята молодцы. Сразу изучили проект, дали сравнение с&nbsp;ближайшими конкурентами. Работают быстро, сроки выдержаны. Высокий уровень коммуникации, поддерживаемый на&nbsp;протяжении всего цикла разработки.</p>
+								<a href="javascript:void(0);" class="rev-item__link">Полный отзыв</a>
+							</div>
+							<div class="rev-item__text-author">
+								<a class="rev-item__author-link" href="" target="_blank" rel="noreferrer">
+									<span>«КБК-Контрол»</span>
+								</a>
+								<p class="rev-item__author">Киррил, генеральный директор компании &quot;kbk-control»</p>
+							</div>
+						</li>
+
+
+						<li class="swiper-slide">
+							<div class="rev-item__text-content">
+								<p class="rev-item__text">Порадовало качество выполняемых проектов, нет претензий с&nbsp;технической стороны. Ребята работают с&nbsp;разными технологиями, что позволяет им&nbsp;подстраиваться под наши процессы и&nbsp;легко интегрироваться в&nbsp;них.</p>
+								<a href="javascript:void(0);" class="rev-item__link">Полный отзыв</a>
+							</div>
+							<div class="rev-item__text-author">
+								<a class="rev-item__author-link" href="" target="_blank" rel="noreferrer">
+									<span>«РумЭксперт»</span>
+								</a>
+								<p class="rev-item__author">Владислав, генеральный директор компании &laquo;РумЭксперт&raquo;</p>
+							</div>
+						</li>
+
+
+						<li class="swiper-slide">
+							<div class="rev-item__text-content">
+								<p class="rev-item__text">Ребята используют современные технологии и&nbsp;подходы, внимательны к&nbsp;требованиям и&nbsp;срокам. Проект тестируется на&nbsp;конрольных точках, поэтому результат работы соответсвует заявленному уровню.</p>
+								<a href="javascript:void(0);" class="rev-item__link">Полный отзыв</a>
+							</div>
+							<div class="rev-item__text-author">
+								<a class="rev-item__author-link" href="" target="_blank" rel="noreferrer">
+									<span class="rev__videonablydenie">«Видеонаблюдение РУ»</span>
+								</a>
+								<p class="rev-item__author">Сергей, гуководитель диджитал отдела &laquo;Видеонаблюдение&nbsp;РУ&raquo;</p>
+							</div>
+						</li>
+
+
+						<li class="swiper-slide">
+							<div class="rev-item__text-content">
+								<p class="rev-item__text">Ребята быстро понимают суть задач и&nbsp;подбирают под каждую задачу отдельный подход. Рекомендуем kyzin.site как надёжного партнёра по&nbsp;вёрстке проектов любой сложности.</p>
+								<a href="javascript:void(0);" class="rev-item__link">Полный отзыв</a>
+							</div>
+							<div class="rev-item__text-author">
+								<a class="rev-item__author-link" href="" target="_blank" rel="noreferrer">
+									<span>«100 дверей»</span>
+								</a>
+								<p class="rev-item__author">Матвей, генеральный директор &laquo;100-dverei.ru&raquo;</p>
+							</div>
+						</li>
+
+					</ul>
+					<!-- If we need pagination -->
+					<!-- <div class="swiper-pagination"></div> -->
+
+					<!-- If we need scrollbar -->
+					<!-- <div class="swiper-scrollbar"></div> -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about" id="contacts">
+		<div class="container">
+			<div class="about__inner">
+				<h1 class="about__title">Пишите, звоните</h1>
+				<div class="about__main">
+					<div class="about__item">
+						<span>Москва</span>
+						<span>Дорожная улица, 60Б</span>
+						<span>Кофейная Кантата</span>
+						<span>Нет, мы&nbsp;не&nbsp;работаем в&nbsp;кафе, но&nbsp;предпочитаем обсуждать и&nbsp;встречаться в&nbsp;тёплой атмосфере за&nbsp;чашечкой кофе или чая.</span>
 					</div>
-					<div class="rev__name">Александр, проект rumexpert.ru</div>
+					<div class="about__item">
+						<span><a href="tel:89152929910">8 (915) 292-99-10</a></span>
+						<p class="about__help">С&nbsp;встретиться можно нами с&nbsp;понедельника по&nbsp;пятницу 11:00&nbsp;&mdash; 18:00</p>
+						<div class="header__mess about__mess">
+							<a href="https://wa.me/79152929910" target="_blank"><i class="fab fa-whatsapp"></i></a>
+							<a href="https://viber.click/79152929910" target="_blank"><i class="fab fa-viber"></i></a>
+							<a href="tg://t.me/postmandreams" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+							<a href="https://www.instagram.com/kuzin.site/" target="_blank"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -379,7 +479,7 @@
 				</div>
 				<div class="footer__item">
 					<p>г. Москва, Варшавское шоссе, дом 24, офис 204</p>
-					<p>info@saito-sfera.ru</p>
+					<p>saito.sfera@yandex.ru</p>
 				</div>
 				<div class="footer__item">
 					<a href="tel:+79152929910" class="phone footer__phone">+7 (915) 29-29-910</a>
@@ -389,10 +489,10 @@
 			</div>
 			<div class="footer__botline">
 				<p>
-					© [[copyrightYear? &start=`2020`]], ООО «СайтоСфера» - Создание и продвижение сайтов. Все права защищены.
+					© [[copyrightYear? &start=`2020`]], ООО «Кузин сайт» - Создание и продвижение сайтов. Все права защищены.
 				</p>
 				<p>
-					Сайт saito-sfera.ru не является публичной офертой и носит
+					Сайт kuzin.site.ru не является публичной офертой и носит
 					информационный характер.
 				</p>
 			</div>
@@ -404,11 +504,11 @@
 			<span class="modal-close">X</span>
 			<div class="modal-inner">
 				<p>
-					Заполните поля формы, чтобы мы могли связаться с вами и все обсудить
+					Заполните поля формы, чтобы мы&nbsp;могли связаться с&nbsp;вами и&nbsp;все обсудить
 				</p>
 				<form action="">
 					<input type="text" name="Имя" placeholder="Ваше имя" />
-					<input type="tel" name="Телефон" placeholder="Ваш телефон" />
+					<input type="text" inputmode="numeric" name="Телефон" placeholder="Ваш телефон" />
 					<input type="submit" value="Отправить" />
 				</form>
 
@@ -423,6 +523,7 @@
 	<!-- <script src="libs/typed.min.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 	<script src="js/common.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 
 </body>
 
