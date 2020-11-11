@@ -59,7 +59,7 @@ document.getElementById("navi-mob_contacts").onclick = function () {
 // menu header end
 
 
-// swiper slide
+// swiper slide start
 var mySwiper = new Swiper('.swiper-container', {
 	// Optional parameters
 	slidesPerView: 3,
@@ -103,11 +103,9 @@ var mySwiper = new Swiper('.swiper-container', {
 			}
 		  },
   })
+// swiper slide end
 
-  // swiper slide end
-
-//   валидация формы телефона
-
+//   валидация формы телефона start
 let inputs = document.querySelectorAll('input[data-rule]');
 for (let input of inputs) {
 	input.addEventListener('blur', function() {
@@ -136,3 +134,46 @@ for (let input of inputs) {
 		}
 	});
 };
+//   валидация формы телефона end
+
+// Открытие меню servises start
+document.getElementById("servises__check-none").onclick = function () {
+	document.getElementById("services__list-more").classList.toggle("block_list-more_active");
+	document.getElementById("servises__check-none-list").classList.toggle("block_hidden");
+};
+
+document.getElementById("servises__list-more_item2").onclick = function () {
+	document.getElementById("services__list-more2").classList.toggle("block_list-more_active");
+	document.getElementById("servises__check-none-list2").classList.toggle("block_hidden");
+};
+
+document.getElementById("servises__list-more_item3").onclick = function () {
+	document.getElementById("services__list-more3").classList.toggle("block_list-more_active");
+	document.getElementById("servises__check-none-list3").classList.toggle("block_hidden");
+};
+// Открытие меню servises end
+
+// анимация крестика start
+(function(){
+	
+	'use strict';
+
+	let a = document.querySelector('.a-toggle');
+	let b = document.querySelector('.b-toggle');
+	let c = document.querySelector('.c-toggle');
+
+	a.addEventListener('click', function(e){
+		e.preventDefault();
+		this.classList.toggle('a-toggle--click');
+	});
+	b.addEventListener('click', function(e){
+		e.preventDefault();
+		this.classList.toggle('b-toggle--click');
+	});
+	c.addEventListener('click', function(e){
+		e.preventDefault();
+		this.classList.toggle('c-toggle--click');
+	});
+	
+})();
+// анимация крестика end
