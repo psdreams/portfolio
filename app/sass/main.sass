@@ -111,9 +111,26 @@ img
 	&__mess
 		display: flex
 		justify-content: space-between
+		.fa-whatsapp
+			color: #02E677
+		.fa-viber
+			color: #774E98
+		.fa-telegram-plane
+			color: #2DA6E0
+		.fa-instagram
+			background: rgb(0,0,0)
+			background: linear-gradient(180deg, rgba(0,0,0,1) 7%, rgba(106,57,185,1) 8%, rgba(160,51,177,1) 35%, rgba(218,46,108,1) 63%, rgba(244,166,70,1) 92%, rgba(0,0,0,1) 93%)
+			border-radius: 8px
 		a
 			margin-left: 10px
-
+			display: flex
+			align-items: center
+.about
+	&__mess
+		.fa-instagram
+			background: rgb(237,240,241)
+			background: linear-gradient(180deg, rgba(237,240,241,1) 7%, rgba(106,57,185,1) 8%, rgba(160,51,177,1) 35%, rgba(218,46,108,1) 63%, rgba(244,166,70,1) 92%, rgba(237,240,241,1) 93%)
+			border-radius: 13px
 // header_wrapper__right tel
 .tel_wrapper
 	margin-right: 20px
@@ -197,11 +214,7 @@ img
 			top: 9px
 			left: 0
 			background-color: #fff
-.block_active
-	display: block
-.block_hidden
-	display: block
-	opacity: 0
+
 //navi end
 
 // hero block2
@@ -376,6 +389,145 @@ img
 			transform: scale(1)
 
 // block3 price end
+
+// servises start
+.servises
+	background-color: #000
+	.sect__title
+		color: #fff
+	&__inner
+		display: flex
+		justify-content: space-between
+		border-bottom: 2px solid #fff
+		padding-bottom: 20px
+		margin-bottom: 20px
+	&__check
+		padding: 0 15px
+		margin: 0 0 15px
+	&__check-more
+		width: 100%
+	&__servises__check-none
+		display: none
+	&__list-more_items
+		position: relative
+		padding: 10px 15px
+		color: #fff
+		cursor: pointer
+		border: 1px solid #ffffff
+		border-radius: 5px
+	ul.servises__list-more li + li
+		margin-top: 10px
+	&__list-more
+		max-width: 800px
+		margin: 0 auto 30px
+		&::before
+			content: ""
+			position: absolute
+			width: 100px
+			height: 1px
+			bottom: 0px
+			left: 0
+			background-color: #fff
+			transform: scale(0)
+			transition: .5s
+		span
+			display: block!important
+			font-size: 20px
+	&__items
+		position: relative
+		margin-left: 30px
+		line-height: 25px
+		&::before
+			content: "\f00c"
+			position: absolute
+			top: 2px
+			left: -30px
+			width: 20px
+			height: 20px
+			font-family: "Font Awesome 5 Free"
+			font-weight: 900
+			color: #e23026
+			z-index: 1
+	ul.servises__list li + li
+		margin-top: 10px
+	&__list
+		li
+			color: #fff
+	&__list-extra_items
+		display: flex
+		justify-content: space-between
+		max-width: 800px
+		margin: 0 auto
+	&__list-more_item
+		color: #fff
+
+// animation plus
+.a-toggle, .b-toggle, .c-toggle
+	outline: none
+	cursor: pointer
+	border: none
+	width: 20px
+	height: 20px
+	position: absolute
+	top: 15px
+	right: 15px
+	background: none
+	&::before, &::after
+		content: ''
+		width: 20px
+		height: 3px
+		background-color: #fff
+		position: absolute
+		left: 20px
+		transform: rotate(90deg)
+		margin-top: -2.5px
+		transition: .4s
+	&:before
+		left: 0px
+	&:after
+		width: 20px
+		left: 0px
+		transform: rotate(0deg)
+	&--click:before, &--click:after
+		left: 20px
+		width: 20px
+		margin: -2.5px 0 0 -20px
+		transform: rotate(0deg)
+	&--click:after
+		transform: rotate(0deg)
+
+// Классы для выпадающих блоков меню начало ======================
+.block_active
+	display: block
+	visibility: visible
+	transform: scaleY(1) translateY(0%)
+	opacity: 1
+.block_hidden
+	display: none
+	visibility: hidden
+	opacity: 0
+	transition: 1s ease
+	transform-origin: top center
+	transform: scaleY(0) translateY(20%)
+.block_list-more_active
+	position: relative
+	margin-bottom: 20px
+	&:before
+		content: ''
+		position: absolute
+		background-color: #fff
+		height: 1px
+		width: 30%
+		transform: scale(1)
+		transition: .5s
+		bottom: -7px
+		left: 0
+
+// Классы для выпадающих блоков меню конец ======================
+
+// servises end
+
+// pirtfolio start
 
 .portfolio
 	background-color: #fff

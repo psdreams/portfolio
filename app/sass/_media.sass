@@ -7,6 +7,16 @@
 @media (max-width: 930px)
 	.rev .rev-item__text
 		font-size: 18px
+	.servises
+		.i-first
+			flex-direction: column
+		&__check
+			width: 100%
+			margin-bottom: 10px
+		.list-first
+			margin-bottom: 20px
+		.list-second
+			text-align: right
 
 @media (max-width: 768px)
 	.header
@@ -19,7 +29,14 @@
 		display: block
 		position: absolute
 		right: 15px
-		// order: 1
+	.servises
+		&__list-extra_items
+			flex-direction: column
+			text-align: center
+		&__list-more_item
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
 
 	.hero
 		&__h1
