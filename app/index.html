@@ -116,7 +116,7 @@
 						</div>
 						<div class="price__price">38 000₽</div>
 						<div class="price__btn">
-							<button class="btn">заказать</button>
+							<button class="btn js-open-modal" data-modal="1">заказать</button>
 						</div>
 					</div>
 					<div class="price__item">
@@ -128,7 +128,7 @@
 						</div>
 						<div class="price__price">60 000₽</div>
 						<div class="price__btn">
-							<button class="btn">заказать</button>
+							<button class="btn js-open-modal" data-modal="1">заказать</button>
 						</div>
 					</div>
 					<div class="price__item">
@@ -696,9 +696,9 @@
 		</div>
 	</footer> -->
 
-	<div class="modal">
+	<div id="modal" class="modal" data-modal="1">
 		<div class="modal-content">
-			<span class="modal-close">X</span>
+			<span class="modal__cross js-modal-close">X</span>
 			<div class="modal-inner">
 				<p>
 					Заполните поля формы, чтобы мы&nbsp;могли связаться с&nbsp;вами и&nbsp;все обсудить
@@ -706,12 +706,13 @@
 				<form action="">
 					<input type="text" name="Имя" placeholder="Ваше имя" />
 					<input type="text" inputmode="numeric" name="Телефон" placeholder="Ваш телефон" />
-					<input type="submit" value="Отправить" />
+					<input class="btn" type="submit" value="Отправить" />
 				</form>
 
 			</div>
 		</div>
 	</div>
+	<div class="overlay js-overlay-modal"></div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
