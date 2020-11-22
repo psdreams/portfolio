@@ -140,7 +140,7 @@
 						</div>
 						<div class="price__price">90 000₽</div>
 						<div class="price__btn">
-							<button class="btn">заказать</button>
+							<button class="btn js-open-modal" data-modal="1">заказать</button>
 						</div>
 					</div>
 					<div class="price__item">
@@ -152,7 +152,7 @@
 						</div>
 						<div class="price__price">70 000₽</div>
 						<div class="price__btn">
-							<button class="btn">заказать</button>
+							<button class="btn js-open-modal" data-modal="1">заказать</button>
 						</div>
 					</div>
 				</div>
@@ -185,17 +185,17 @@
 					<div class="cost__item">
 						<span class="cost__time">7 н/ч работы в месяц</span>
 						<span class="cost__price">8 000 руб</span>
-						<button class="btn cost__button">Заказать</button>
+						<button class="btn cost__button js-open-modal" data-modal="1">заказать</button>
 					</div>
 					<div class="cost__item">
 						<span class="cost__time">10 н/ч работы в месяц</span>
 						<span class="cost__price">11 000 руб.</span>
-						<button class="btn cost__button">Заказать</button>
+						<button class="btn cost__button js-open-modal" data-modal="1">заказать</button>
 					</div>
 					<div class="cost__item">
 						<span class="cost__time">18 н/ч работы в месяц</span>
 						<span class="cost__price">17 500 руб.</span>
-						<button class="btn cost__button">Заказать</button>
+						<button class="btn cost__button js-open-modal" data-modal="1">заказать</button>
 					</div>
 				</div>
 			</div>
@@ -698,17 +698,16 @@
 
 	<div id="modal" class="modal" data-modal="1">
 		<div class="modal-content">
-			<span class="modal__cross js-modal-close">X</span>
+			<span class="a-toggle modal__cross js-modal-close"></span>
 			<div class="modal-inner">
 				<p>
 					Заполните поля формы, чтобы мы&nbsp;могли связаться с&nbsp;вами и&nbsp;все обсудить
 				</p>
 				<form action="">
-					<input type="text" name="Имя" placeholder="Ваше имя" />
-					<input type="text" inputmode="numeric" name="Телефон" placeholder="Ваш телефон" />
-					<input class="btn" type="submit" value="Отправить" />
+					<input class="input" type="text" name="Имя" placeholder="Ваше имя ..." />
+					<input class="input" type="text" inputmode="numeric" name="Телефон" placeholder="Ваш телефон ..." id="tel" onkeyup="javascript:mask('zipCode', '+7(000)000-00-00', event);" value=""/>
 				</form>
-
+				<button class="btn modal__btn" type="submit" value="Отправить">Отправить</button>
 			</div>
 		</div>
 	</div>
