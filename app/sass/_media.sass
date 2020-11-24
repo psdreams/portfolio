@@ -110,15 +110,22 @@
 	.footer__inner
 		flex-direction: column
 	.modal
-		padding: 10px
+		padding: 10px 10px 20px
 		&-inner
 			grid-template-columns: 1fr
-			grid-column: auto
 			padding: 20px
 			grid-gap: 20px
 			p, form, button
-				grid-column: auto
-				grid-row: auto
+				grid-template-columns: 1fr
+				align-items: center
+				width: 100%
+		.form-group
+			width: 100%
 		&__cross
 			top: 22px
 			right: 20px
+			&::before, &::after
+				background-color: #fff
+		form
+			display: flex
+			flex-direction: column

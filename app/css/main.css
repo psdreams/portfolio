@@ -1238,7 +1238,7 @@ img {
 }
 
 .about {
-  padding-bottom: 20px;
+  padding: 50px 0 70px 0;
   background-color: #000;
 }
 
@@ -1599,20 +1599,30 @@ img {
     flex-direction: column;
   }
   .modal {
-    padding: 10px;
+    padding: 10px 10px 20px;
   }
   .modal-inner {
     grid-template-columns: 1fr;
-    grid-column: auto;
     padding: 20px;
     grid-gap: 20px;
   }
   .modal-inner p, .modal-inner form, .modal-inner button {
-    grid-column: auto;
-    grid-row: auto;
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 100%;
+  }
+  .modal .form-group {
+    width: 100%;
   }
   .modal__cross {
     top: 22px;
     right: 20px;
+  }
+  .modal__cross::before, .modal__cross::after {
+    background-color: #fff;
+  }
+  .modal form {
+    display: flex;
+    flex-direction: column;
   }
 }
