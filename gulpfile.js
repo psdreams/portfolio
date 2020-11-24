@@ -17,7 +17,7 @@ const styles = () =>{
 		}).on('error', sass.logError)
 	)
 	.pipe(autoprefixer({cascade: false}))
-	.pipe(clean_css())
+	// .pipe(clean_css())
 	.pipe(dest('./app/css/'))
 	.pipe(browserSync.stream())
 }

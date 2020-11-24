@@ -697,19 +697,34 @@
 	</footer> -->
 
 	<div id="modal" class="modal" data-modal="1">
+
 		<div class="modal-content">
 			<span class="a-toggle modal__cross js-modal-close"></span>
 			<div class="modal-inner">
-				<p>
-					Заполните поля формы, чтобы мы&nbsp;могли связаться с&nbsp;вами и&nbsp;все обсудить
-				</p>
-				<form action="">
-					<input class="input" type="text" name="Имя" placeholder="Ваше имя ..." />
-					<input class="input" type="text" inputmode="numeric" name="Телефон" placeholder="Ваш телефон ..." id="tel" onkeyup="javascript:mask('zipCode', '+7(000)000-00-00', event);" value=""/>
+				<p>Заполните поля формы, чтобы мы&nbsp;могли связаться с&nbsp;вами и&nbsp;все обсудить</p>
+				<form action="telegram.php" method="POST">
+					<!--<legend>Заголовок формы</legend>-->
+					
+						<div class="form-group">
+							<label for="Введите ваше имя"></label>
+							<input type="text" class="btn modal__btn input" id="" name="user_name" placeholder="Например, Иван">
+						</div>
+						
+						<div class="form-group">
+							<label for="Введите номер телефона"></label>
+							<input type="text" class="btn modal__btn input" id="" name="user_phone" placeholder="+7 (999) 99 99 999">
+						</div>
+						
+						<!-- <div class="form-group">
+							<label for="Введите email"></label>
+							<input type="text" class="btn modal__btn" id="" name="user_email" placeholder="mail@mail.ru">
+						</div> -->
+						<button type="submit" class="btn btn-primary">Отправить форму</button>
 				</form>
-				<button class="btn modal__btn" type="submit" value="Отправить">Отправить</button>
-			</div>
+				
+		  </div>
 		</div>
+	
 	</div>
 	<div class="overlay js-overlay-modal"></div>
 

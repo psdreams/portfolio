@@ -301,66 +301,6 @@ document.getElementById("servises__list-more_item3").onclick = function () {
 //   } catch(e) {}
 //   }
 
-// liga-a
-// "use strict";
-// !function() {
-//     var m = ["Форма отправлена!", "Мы свяжемся с вами в ближайшее время"]
-//       , o = document.querySelector(".form")
-//       , a = document.querySelector(".page-footer__form-wrapper");
-//     if (o) {
-//         try {
-//             new IMask(document.getElementById("phone"),{
-//                 mask: "+{7}(000)000-00-00"
-//             })
-//         } catch (e) {
-//             console.info(e)
-//         }
-//         var e = document.getElementById("email")
-//           , t = document.getElementById("name")
-//           , c = document.getElementById("phone")
-//           , p = [e, t]
-//           , _ = {
-//             email: function(e) {
-//                 return e.length ? /[-.\w]+@([\w-]+\.)+[\w-]+/g.test(e) ? 0 : "Введите корректный e-mail" : 'Обязательное поле "email" не заполнено'
-//             },
-//             name: function(e) {
-//                 return e.length ? 0 : 'Обязательное поле "имя" не заполнено'
-//             }
-//         }
-//           , v = function() {
-//             var e = document.querySelectorAll(".form__input-error-message")
-//               , t = document.querySelector(".form__error-message");
-//             [].forEach.call(e, function(e) {
-//                 e.parentNode.removeChild(e)
-//             }),
-//             t && t.parentNode.removeChild(t)
-//         }
-//           , g = function(e, t) {
-//             var n = document.createElement("p");
-//             n.classList.add("form__input-error-message"),
-//             n.textContent = t,
-//             e.insertAdjacentElement("afterend", n)
-//         }
-//           , h = function(e) {
-//             var t = document.createElement("p");
-//             t.classList.add("form__error-message"),
-//             t.textContent = e,
-//             l.insertAdjacentElement("beforebegin", t)
-//         }
-//           , E = function() {
-//             var e = document.querySelector(".form-succes-message")
-//               , t = document.querySelector(".form-succes-message__button");
-//             t && t.removeEventListener("click", E),
-//             e && e.parentNode.removeChild(e)
-//         }
-//           , y = function(e) {
-//             e.preventDefault()
-//         }
-//           , L = function() {
-//             l.classList.remove("form__submit--loader"),
-//             l.removeEventListener("click", y)
-// 		};
-// 	};
 
 
 window.addEventListener("DOMContentLoaded", function() {
