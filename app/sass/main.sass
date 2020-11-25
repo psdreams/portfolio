@@ -242,6 +242,8 @@ img
 	&__text
 		line-height: 20px
 		margin-bottom: 20px
+	&__items .hero__items-wrapper form .hero__btn
+		color: #fff
 
 .hero__items
 	max-width: 800px
@@ -255,9 +257,10 @@ img
 	input
 		display: block
 		padding: 16px 12px
+		color: $text
 		&[type=submit]
 			background-color: $accent
-			color: #fff
+			color: $text
 			cursor: pointer
 //typed
 .typed::after
@@ -352,7 +355,24 @@ img
 
 // block3 price
 
+#price
+	background-color: #fff
+
 .price
+	h2
+		font-weight: 700
+		font-size: 48px
+	&__black-friday
+		font-size: 42px
+		line-height: 44px
+		margin-bottom: 20px
+		span
+			color: #e23026
+			font-weight: 700
+	&__black-time
+		font-size: 26px
+		line-height: 30px
+		margin-bottom: 40px
 	&__inner
 		display: flex
 		justify-content: space-between
@@ -363,27 +383,31 @@ img
 		display: flex
 		justify-content: space-evenly
 		flex-wrap: wrap
-		width: 60%
+		width: 100%
 	&__item
-		width: 35%
+		width: 356px
 		background-color: #ffffff
-		box-shadow: 4px 2px 12px rgba(0, 0, 0, .1)
+		// box-shadow: 4px 2px 12px rgba(0, 0, 0, .1)
 		border-radius: 5px
-		padding: 10px 5px
+		padding: 10px 20px
 		margin-bottom: 20px
 		transition: transform .3s ease-in
 		&:hover
-			transform: scale(1.1)
+			transform: scale(1.03)
+	&__item-list
+		padding: 0 20px
+		margin-bottom: 30px
 	&__name
 		padding: 10px
-		text-align: center
+		text-align: left
 		min-height: 44px
+		margin-bottom: 50px
 	&__name-item
 		display: block
+		font-size: 30px
 		min-height: 44px
-	&__item-img
-		width: 40%
-		margin: 0 auto
+		&:first-child
+			margin-bottom: 30px
 	&__list-h2
 		margin-bottom: 30px
 		text-decoration: underline
@@ -391,30 +415,45 @@ img
 	&__list
 		padding: 10px 0
 		margin-bottom: 10px
-		p
-			margin-bottom: 10px
-			position: relative
-			padding-left: 30px
-			&:before
-				content: ""
-				position: absolute
-				width: 5px
-				height: 5px
-				border-radius: 50%
-				background-color: #333
-				top: 10px
-				left: 10px
+	&__item-list
+		li
+			padding: 10px 0
+			border-bottom: 0.5px solid $text
+			border-color: $text
+			&:last-child
+				border-bottom: none
+			&
 	&__price
-		text-align: center
-		margin-top: 20px
+		position: relative
+		text-align: left
+		font-size: 40px
+		line-height: 42px
 		margin-bottom: 20px
-	&__btn
-		margin-bottom: 10px
+		padding-left: 40px
+		&::before
+			content: "от"
+			position: absolute
+			top: calc( 50% - 15px )
+			left: 17px
+			font-size: 14px
+			width: 15px
+			height: 15px
+		&::after
+			content: "Руб."
+			position: absolute
+			top: calc( 50% - 15px )
+			left: 175px
+			font-size: 14px
+			width: 15px
+			height: 15px
+
+		span
+			display: block
 	.btn
-		margin: auto
+		margin-left: 40px
 		background-color: #e23026
 		color: #fff
-		// font-weight: 400
+
 //.price__items-list
 .price__link
 	font-size: 24px
@@ -779,11 +818,12 @@ img
 			input
 				grid-row: 2 / 3
 				grid-column: 1 / -3
-				color: #000
+				height: 50px
+				text-align: left
 			button
 				grid-row: 3/3
 				grid-column: 1/4
-	.modal-inner form .modal__btn:hover, .modal-inner form button:hover, .modal.btn:hover
+	.modal-inner form .modal__btn:hover, .modal-inner form button:hover, .modal.btn:hover, .modal-inner form input::placeholder:hover
 		background-color: #fff
 		color: #000
 
@@ -798,11 +838,6 @@ img
 			color: #fff
 			text-align: left
 
-.hero__form input
-	display: block
-	padding: 16px 12px
-	margin: 0
-	color: #fff
 .input
 	display: block
 	width: 100%

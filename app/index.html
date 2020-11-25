@@ -87,9 +87,11 @@
 							Добрый день, меня зовут Георгий, и&nbsp;я&nbsp;являюсь частым веб-мастером с&nbsp;опытом более 5&nbsp;лет. За&nbsp;эти годы своей деятельности я&nbsp;создал и&nbsp;развил много различных проектов.
 						</p>
 						<p>Я&nbsp;предлагаю вам не&nbsp;только качественную разработку и&nbsp;создание сайта, но&nbsp;и&nbsp;могу занятьсь вопросами его продвижения в&nbsp;сети, что значительно увеличит возможности привлечения новых клиентов, а&nbsp;соответственно повысит ваши доходы.</p>
-						<form class="hero__form">
-							<input id="phone" class="hero__input" type="text" inputmode="numeric" pattern=".*" data-rule="number" aria-label="номер телефона" placeholder="Введите номер..">
-							<input type="submit" name="submit" value="Отправить">
+	    				<form action="./telegram.php" method="POST" class="hero__form">
+							<input type="hidden" value="[[*pagetitle]]">
+							<input type="hidden" value="Форма на первом экране">
+							<input id="phone" class="hero__input" type="text" name="user_phone" inputmode="numeric" pattern=".*" data-rule="number" aria-label="номер телефона" placeholder="Введите номер..">
+							<input class="hero__btn" type="submit" name="submit" value="Отправить">
 						</form>
 					</div>
 				</div>
@@ -105,70 +107,80 @@
 	<section class="sect price" id="price">
 		<div class="container">
 			<h2 class="sect__title">Цены</h2>
+			<p class="price__black-friday">Успей получить сайт по лучшей цене <span class="no-wrap">Black Friday</span></p>
+			<p class="price__black-time">Акция действует до 30.11 включительно</p>
 			<div class="price__inner">
 				<div class="price__items price__items-card">
 					<div class="price__item">
 						<div class="price__name">
 							<span class="price__name-item">Лендинг</span>
+							<span class="price__name-time">2-5 дней</span>
 						</div>
-						<div class="price__item-img">
-							<img src="assets/img/price/landing-page.svg" alt="landing-page">
+						<div class="price__item-list">
+							<ul>
+								<li>Уникальный дизайн</li>
+								<li>SEO Оптимизация</li>
+								<li>Адаптив под все разрешения</li>
+								<li>Формы и виджеты</li>
+								<li>Верстка</li>
+							</ul>
 						</div>
-						<div class="price__price">38 000₽</div>
+						<div class="price__price">
+							<span>20'000</span>
+							<span><del>30'000</del></span>
+						</div>
 						<div class="price__btn">
-							<button class="btn js-open-modal" data-modal="1">заказать</button>
+							<button class="btn js-open-modal" data-modal="1">заказать лендинг</button>
 						</div>
 					</div>
 					<div class="price__item">
 						<div class="price__name">
-							<span class="price__name-item">Сайт-визитка</span>
+							<span class="price__name-item">Многостраничный</span>
+							<span class="price__name-time">5-14 дней</span>
 						</div>
-						<div class="price__item-img">
-							<img src="assets/img/price/site-contact.svg" alt="site-contact">
+						<div class="price__item-list">
+							<ul>
+								<li>Уникальный дизайн</li>
+								<li>SEO Оптимизация</li>
+								<li>Адаптив под все разрешения</li>
+								<li>До 20-ти уникальных страниц</li>
+								<li>Формы и виджеты</li>
+								<li>Верстка</li>
+							</ul>
 						</div>
-						<div class="price__price">60 000₽</div>
+						<div class="price__price">
+							<span>30'000</span>
+							<span><del>40'000</del></span>
+						</div>
 						<div class="price__btn">
-							<button class="btn js-open-modal" data-modal="1">заказать</button>
+							<button class="btn js-open-modal" data-modal="1">заказать сайт</button>
 						</div>
 					</div>
 					<div class="price__item">
 						<div class="price__name">
-							<span class="price__name-item">Интернет-магазин</span>
+							<span class="price__name-item">Интернет магазин</span>
+							<span class="price__name-time">7-21 дней</span>
 						</div>
-						<div class="price__item-img">
-							<img src="assets/img/price/online-store.svg" alt="online-store">
+						<div class="price__item-list">
+							<ul>
+								<li>Уникальный дизайн</li>
+								<li>SEO Оптимизация</li>
+								<li>Адаптив под все разрешения</li>
+								<li>Каталог до 1000 товаров</li>
+								<li>Корзина и онлайн-покупка</li>
+								<li>Формы и виджеты</li>
+								<li>Верстка</li>
+							</ul>
 						</div>
-						<div class="price__price">90 000₽</div>
+						<div class="price__price">
+							<span>50'000</span>
+							<span><del>80'000</del></span>
+						</div>
 						<div class="price__btn">
-							<button class="btn js-open-modal" data-modal="1">заказать</button>
+							<button class="btn js-open-modal" data-modal="1">заказать магазин</button>
 						</div>
 					</div>
-					<div class="price__item">
-						<div class="price__name">
-							<span class="price__name-item">Корпоративный сайт</span>
-						</div>
-						<div class="price__item-img">
-							<img src="assets/img/price/corporative-site.svg" alt="corporative-site">
-						</div>
-						<div class="price__price">70 000₽</div>
-						<div class="price__btn">
-							<button class="btn js-open-modal" data-modal="1">заказать</button>
-						</div>
-					</div>
-				</div>
-				<div class="price__items price__items-text">
-					<div class="price__list-title">
-						<h2 class="price__list-h2">Что вы получаете</h2>
-					</div>
-					<ul class="price__items-list">
-						<li class="price__list"><span class="price__link" href="">Анализ конкурентов</span></li>
-						<li class="price__list"><span class="price__link" href="">Грамотная структура</span></li>
-						<li class="price__list"><span class="price__link" href="">Уникальный дизайн</span></li>
-						<li class="price__list"><span class="price__link" href="">Мобильная версия</span></li>
-						<li class="price__list"><span class="price__link" href="">Удобная админка</span></li>
-						<li class="price__list"><span class="price__link" href="">Настройка аналитики</span></li>
-						<li class="price__list"><span class="price__link" href="">Регистрация домена и хостинга</span></li>
-					</ul>
+
 				</div>
 			</div>
 		</div>
@@ -705,12 +717,13 @@
 					
 						<div class="form-group">
 							<label for="Введите ваше имя"></label>
-							<input type="text" class="btn modal__btn input" id="" name="user_name" placeholder="Например, Иван">
+							<input type="text" class="btn modal__btn input" id="" aria-label="имя" name="user_name" placeholder="Например, Иван">
 						</div>
 						
 						<div class="form-group">
 							<label for="Введите номер телефона"></label>
-							<input type="text" class="btn modal__btn input" id="" name="user_phone" placeholder="+7 (999) 99 99 999">
+							<input type="text" class="btn modal__btn input" id="tel" name="user_phone" inputmode="numeric" data-rule="number" aria-label="номер телефона" placeholder="Введите номер..">
+							<!-- <input id="phone" class="hero__input" type="text" name="user_phone" inputmode="numeric" pattern=".*" data-rule="number" aria-label="номер телефона" placeholder="Введите номер.."> -->
 						</div>
 						
 						<!-- <div class="form-group">

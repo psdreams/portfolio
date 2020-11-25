@@ -55,6 +55,16 @@
 		transform: none!important
 	// Удалить после js - end
 	.price
+		h2
+			font-size: 24px
+			line-height: 26px
+		&__black-friday
+			text-align: center
+			font-size: 24px
+			line-height: 26px
+		&__black-time
+			font-size: 18px
+			line-height: 22px
 		&__inner
 			flex-direction: column
 		.price__items
@@ -101,7 +111,9 @@
 		margin-top: 30px
 		margin-bottom: 40px
 	.price__item
-		width: 60%
+		width: 100%
+	.price__price::before
+		left: 23px
 	.rev .swiper-slide
 		flex-direction: column
 	.rev-item__text-author
@@ -121,6 +133,10 @@
 				width: 100%
 		.form-group
 			width: 100%
+			margin-bottom: 10px
+			input
+				width: 100%
+				text-align: left
 		&__cross
 			top: 22px
 			right: 20px
@@ -129,3 +145,11 @@
 		form
 			display: flex
 			flex-direction: column
+
+@media (max-width: 480px)
+	.price__item
+		width: 100%
+		padding: 10px 5px
+		margin-bottom: 30px
+	.price__name
+		padding: 5px
